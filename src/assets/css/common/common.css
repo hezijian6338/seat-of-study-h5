@@ -1,0 +1,16 @@
+.w{
+    width: 420px;
+}
+.text{
+    color:#a6a6a7;
+}
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.outline-none{
+    outline: none;
+}
+
+
