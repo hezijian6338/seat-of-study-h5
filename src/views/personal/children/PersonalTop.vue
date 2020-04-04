@@ -24,11 +24,11 @@ export default {
     methods:{
         gotoAuthenticationClick(){
              this.$router.push('/authentication')
-            this.$store.commit('changeShow')
+            
         },
         gotoMoreClick(){
             this.$router.push('/more')
-            this.$store.commit('changeShow')
+            
         }
     }
 }

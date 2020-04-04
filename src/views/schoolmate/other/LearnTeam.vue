@@ -2,7 +2,7 @@
   <div>
     <nav-bar class="nav-bar-container">
       <div slot="left" class="top-left-return" @click="backClick">
-        <img src="~assets/imgs/common/fanhui.png" alt />
+        <img  id="nav-return" src="~assets/imgs/common/fanhui.png" alt="学习小队" />
       </div>
       <span slot="center">学习小队</span>
     </nav-bar>
@@ -31,10 +31,10 @@ export default {
     }
   },
   methods:{
-        //返回按钮的事件监听,点击后返回之前路由,并且显示tabbar
+        //返回按钮的事件监听,点击后返回之前路由
        backClick(){
             this.$router.back()
-            this.$store.commit('changeShow')
+            
         },
 
       //监听input改变,有值的时候显示叉号
@@ -53,21 +53,6 @@ export default {
 </script>
 
 <style scoped>
-.nav-bar-container{
-    position: relative;
-}
-.top-left-return{
- position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 10px;
-    top: 20px;
-    /* padding-left: 10px; */
-}
-.top-left-return img{
-   width: 100%;
-   height: 100%;
-}
 button{
     height: 50px;
     width: 185px;

@@ -2,7 +2,7 @@
   <div id="personal-middle-container" class="w">
       <div class="middle-top-item">
           <div class="item1"></div>
-          <div >
+          <div @click="gotoStudyDetail">
               <div class="juli">{{time+'d'}}</div>
               <span class="text">学习详情</span>
               
@@ -20,17 +20,17 @@
       </div>
 
       <div class="middle-bottom-item">
+          <img class="pop" src="~assets/imgs/personal/pop.gif" alt="">
           <img class="bottle" src="~assets/imgs/personal/bottle.png" alt="">
-          <div class="center-right">
+          <div class="center-right" @click="gotoTimeBottle">
               <div class="center-right-top">
               <span class="time">时间颗粒</span>
               <img  class="lv1" src="~assets/imgs/personal/lv1.png" alt="">
               <span v-show="false">待领取</span>
               </div>
-              <div>进度条</div>
-              <div class="text">{{now+'/'+sum}} {{percent}}</div>
+              <el-progress :percentage="percent" :show-text="false"></el-progress>
+              <div class="text">{{now+'/'+sum}} {{percent+'%'}}</div>
           </div>
-          
       </div>
   </div>
 </template>
@@ -45,23 +45,29 @@ export default {
     data(){
         return{
             time:1,
-            now:10,
+            now:this.$store.state.timecount,
             sum:10000,
         }
     },
     methods:{
+        gotoStudyDetail(){
+            this.$router.push('/studydetail')
+        },
         gotoGetGood(){
             this.$router.push('/getgood')
-            this.$store.commit('changeShow')
+            
         },
         gotoVisted(){
             this.$router.push('/visited')
-            this.$store.commit('changeShow')
+            
+        },
+        gotoTimeBottle(){
+            this.$router.push('/timebottle')
         }
     },
     computed:{
         percent(){
-            return (this.now/this.sum)*100+'%' 
+            return (this.now/this.sum)*100
         }
     }
 }
@@ -81,6 +87,7 @@ padding: 10px 0;
     justify-content: space-between;
     text-align: center;
     font-size: 18px;
+    
 }
 .middle-top-item span{
     font-size: 16px;
@@ -104,7 +111,14 @@ padding: 10px 0;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    position: relative;
 }
+.pop{
+    position: absolute;
+    width: 100px;
+    bottom: 70px;
+}
+
 .bottle{
     height: 70px;
     margin:10px 0 0 15px;
@@ -113,9 +127,10 @@ padding: 10px 0;
 
 .center-right{
     margin-left: 10px;
+    width:300px;
 }
 .center-right-top{
-    padding-bottom:2px ;
+    padding-bottom:8px ;
 }
 .time{
     font-size: 18px;
@@ -124,6 +139,7 @@ padding: 10px 0;
     vertical-align: bottom;
 }
 .text{
-    padding-top: 5px;
+    padding-top: 10px;
 }
+
 </style>

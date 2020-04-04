@@ -5,13 +5,10 @@ Vue.use(Vuex)
 
 const store=new Vuex.Store({
     state:{
-        isShow:true
+       timecount:1000
     },
     mutations:{
-        changeShow(state){
-            // console.log(this.$route)
-            // state.isShow=!state.isShow
-        }
+        
     },
     getters:{
 

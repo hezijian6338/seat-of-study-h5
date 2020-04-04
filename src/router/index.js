@@ -7,21 +7,25 @@ Vue.use(VueRouter)
 //懒加载
 // import Study from 'views/study/Study.vue'
 const Study=()=>import('views/study/Study.vue')
-const SearchSeat=()=>import('views/study/SearchSeat.vue')
-
+const SearchSeat=()=>import('views/study/other/SearchSeat.vue')
+const Rank=()=>import('views/study/other/Rank.vue')
+const Shop=()=>import('views/study/other/Shop.vue')
+const TimeBottle=()=>import('views/study/other/TimeBottle.vue')
+const Exchange=()=>import('views/study/other/Exchange.vue')
 
 const SchoolMate=()=>import('views/schoolmate/SchoolMate.vue')
-const TongZhi=()=>import('views/schoolmate/TongZhi.vue')
-const LearnTeam=()=>import('views/schoolmate/LearnTeam.vue')
+const TongZhi=()=>import('views/schoolmate/other/TongZhi.vue')
+const LearnTeam=()=>import('views/schoolmate/other/LearnTeam.vue')
 
 const Sns=()=>import('views/sns/Sns.vue')
 
 
 const Personal=()=>import('views/personal/Personal.vue')
-const Authentication=()=>import('views/personal/Authentication.vue')
-const More=()=>import('views/personal/More.vue')
-const GetGood=()=>import('views/personal/GetGood.vue')
-const Visted=()=>import('views/personal/Visted.vue')
+const Authentication=()=>import('views/personal/other/Authentication.vue')
+const More=()=>import('views/personal/other/More.vue')
+const GetGood=()=>import('views/personal/other/GetGood.vue')
+const Visted=()=>import('views/personal/other/Visted.vue')
+const StudyDetail=()=>import('views/personal/other/StudyDetail.vue')
 
 
 //配置路由
@@ -30,7 +34,7 @@ const routes=[
         path:'/',
         redirect:'/study'
     },
-
+    //学习 相关路由
     {
         path:'/study',
         component:Study
@@ -38,6 +42,22 @@ const routes=[
     {
         path:'/searchseat',
         component:SearchSeat
+    },
+    {
+        path:'/rank',
+        component:Rank
+    },
+    {
+        path:'/shop',
+        component:Shop
+    },
+    {
+        path:'/timebottle',
+        component:TimeBottle
+    },
+    {
+        path:'/exchange',
+        component:Exchange
     },
 
     
@@ -82,6 +102,10 @@ const routes=[
     {
         path:'/visited',
         component:Visted
+    },
+    {
+        path:'/studydetail',
+        component:StudyDetail
     }
 
 ]

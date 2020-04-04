@@ -1,15 +1,15 @@
 <template>
   <div  id="study-top-container">
-      <div class="study-top-item">
+      <div class="study-top-item" @click="gotoTimeBottle">
             <img src="~assets/imgs/study/bottle.png" alt="时间瓶">
             <span>时间瓶</span>
       </div>
-      <div class="study-top-item">
-            <img src="~assets/imgs/study/shop.png" alt="时间瓶">
+      <div class="study-top-item" @click="gotoShop">
+            <img src="~assets/imgs/study/shop.png" alt="小店">
             <span>小店</span>
       </div>
-      <div class="study-top-item">
-            <img src="~assets/imgs/study/rank.png" alt="时间瓶">
+      <div class="study-top-item" @click="gotoRank">
+            <img src="~assets/imgs/study/rank.png" alt="排行榜">
             <span>排行榜</span>
       </div>
   </div>
@@ -17,7 +17,18 @@
 
 <script>
 export default {
-    name:'StudyTop'
+    name:'StudyTop',
+    methods:{
+        gotoTimeBottle(){
+              this.$router.push('/timebottle')
+        },
+        gotoShop(){
+              this.$router.push('/shop')
+        },
+        gotoRank(){
+              this.$router.push('/rank')
+        }
+    }
 }
 </script>
 

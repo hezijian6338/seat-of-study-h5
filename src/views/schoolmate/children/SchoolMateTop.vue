@@ -17,11 +17,11 @@ export default {
     methods:{
         TongZhiClick(){
             this.$router.push('/tongzhi')
-            this.$store.commit('changeShow')
+          
         },
         LearnTeamClick(){
             this.$router.push('/learnteam')
-            this.$store.commit('changeShow')
+            
         }
     }
 }

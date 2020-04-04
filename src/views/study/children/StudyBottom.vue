@@ -20,7 +20,7 @@ export default {
     methods:{
         gotoSearchSeatClick(){
             this.$router.push('/searchseat')
-            this.$store.commit('changeShow')
+            
         }
     }
 }

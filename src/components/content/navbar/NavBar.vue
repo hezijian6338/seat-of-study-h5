@@ -2,7 +2,7 @@
   <div class="nav-container">
       <div class="nav-item"><slot name="left"></slot></div>
       <div class="nav-item"><slot name="center"></slot></div>
-      <div class="nav-item"><img src="~assets/imgs/guide/daohang.png" alt=""></div>
+      <div class="nav-item"><img class="daohang" src="~assets/imgs/guide/daohang.png" alt=""></div>
 
   </div>
 </template>
@@ -27,10 +27,8 @@ export default {
     align-items: center;
     justify-content: center;
    
-
 }
-.nav-item img{
+.daohang{
     height: 40px;
-
 }
 </style>

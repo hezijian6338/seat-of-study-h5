@@ -3,7 +3,7 @@
         <tab-bar-item  path="/study">
             <img slot="item-icon" src="~assets/imgs/tab/index.png" alt="主页">
             <img slot="item-icon-active" src="~assets/imgs/tab/index_s.png" alt="激活的主页">
-            <span slot="text">首页</span>
+            <span slot="text">学习</span>
         </tab-bar-item>
         <tab-bar-item path="/schoolmate">
             <img slot="item-icon" src="~assets/imgs/tab/schoolmate.png" alt="主页">

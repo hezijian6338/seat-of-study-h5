@@ -1,7 +1,7 @@
 <template>
       <div id="container">
         <nav-bar class="nav-bar-container">
-            <div slot="left" class="top-left-return" @click="backClick"><img src="~assets/imgs/common/fanhui.png" alt=""></div>
+            <div slot="left" class="top-left-return" @click="backClick"><img  id="nav-return" src="~assets/imgs/common/fanhui.png" alt=""></div>
             <span slot="center">加V认证</span>
         </nav-bar>
         <div class="flex-center">
@@ -21,7 +21,7 @@ export default {
     methods:{
         backClick(){
             this.$router.back()
-            this.$store.commit('changeShow')
+           
         }
     }
 }
@@ -30,21 +30,6 @@ export default {
 <style scoped>
 #container{
     height: 880px;
-}
-.nav-bar-container{
-    position: relative;
-}
-.top-left-return{
- position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 10px;
-    top: 20px;
-    /* padding-left: 10px; */
-}
-.top-left-return img{
-   width: 100%;
-   height: 100%;
 }
 .jiav{
     box-shadow: 0 0 15px #eee;
