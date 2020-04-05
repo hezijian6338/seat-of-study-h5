@@ -10,7 +10,7 @@
     align-items: center;
 }
 .outline-none{
-    outline: none;
+    outline: none !important;
 }
 
 

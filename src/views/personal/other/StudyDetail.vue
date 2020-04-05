@@ -115,10 +115,5 @@ export default {
   margin-right: 10px;
   font-size: 16px;
 }
-.a{
-  
-}
-
-    
 
 </style>

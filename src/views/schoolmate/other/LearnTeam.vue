@@ -11,7 +11,7 @@
         <img id="team_search" src="~assets/imgs/common/team_search.png" alt="">
         <div v-show="xShow" id="close" @click="cleanClick"><img  src="~assets/imgs/common/close.png" alt=""></div>
         <input class="search" type="text" name="search" id="search" placeholder="输入同学号/手机号来搜索小队" @keydown="inputChange" ref="s">
-        <button ><img  src="~assets/imgs/common/tianjia.png" alt="添加小队"> 创建小队</button>
+        <button class="outline-none" ><img  src="~assets/imgs/common/tianjia.png" alt="添加小队"> 创建小队</button>
         <span class="text">没有找到合适的小队?自己创建</span>
     </div>
     

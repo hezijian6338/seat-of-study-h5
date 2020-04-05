@@ -8,16 +8,16 @@
     <div v-if="isActive" class="common-item bottom-item1">
       <img class="star" src="~assets/imgs/personal/no_sns.png" alt="星星" />
       <span class="text text2">快来发表你的第一条动态吧~</span>
-      <button>
+      <button class="outline-none">
         <img class="add" src="~assets/imgs/personal/add_sns.png" alt />
-        <span @click="centerDialogVisible = true">发布动态</span>
+        <span @click="centerDialogVisible = true" >发布动态</span>
       </button>
     </div>
     <div v-else class="common-item bottom-item2">
       <img class="nostudy" src="~assets/imgs/personal/no_study.png" alt="没学习" />
       <span class="text text2">还没开始学习哦</span>
       <span class="text text2">抓紧时间赶快去学习吧</span>
-      <button @click="gotoStudyClick">去学习</button>
+      <button @click="gotoStudyClick" class="outline-none">去学习</button>
     </div>
 
     <!-- 弹出对话框 -->
