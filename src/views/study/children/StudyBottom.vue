@@ -5,7 +5,7 @@
             <span class="learn1">学习计时</span>
             <span class="learn2">随时随地,专注学习</span>
       </div>
-      <div class="study-bottom-item" >
+      <div class="study-bottom-item" @click="gotoSacn" >
             <img src="~assets/imgs/study/sitting_study.png" alt="时间瓶">
             <span class="learn1" >扫码上座</span>
             <span class="learn2">规范座位,专注学习</span>
@@ -23,6 +23,9 @@ export default {
         },
         gotoStudyTime(){
             this.$router.push('/studytime')
+        },
+        gotoSacn(){
+            this.$router.push('/scan')
         }
     }
 }

@@ -12,6 +12,7 @@
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",
     "vue": "^2.6.11",
+    "vue-qrcode-reader": "^2.1.1",
     "vue-router": "^3.1.6",
     "vuex": "^3.1.3"
   },

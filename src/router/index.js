@@ -7,6 +7,7 @@ Vue.use(VueRouter)
 //懒加载
 // import Study from 'views/study/Study.vue'
 const Study=()=>import('views/study/Study.vue')
+const Scan=()=>import('views/study/other/Scan.vue')
 const SearchSeat=()=>import('views/study/other/SearchSeat.vue')
 const Rank=()=>import('views/study/other/Rank.vue')
 const Shop=()=>import('views/study/other/Shop.vue')
@@ -39,6 +40,10 @@ const routes=[
     {
         path:'/study',
         component:Study
+    },
+    {
+        path: '/scan',
+        component: Scan
     },
     {
         path:'/searchseat',
