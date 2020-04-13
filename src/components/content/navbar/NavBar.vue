@@ -2,7 +2,9 @@
   <div class="nav-container">
       <div class="nav-item"><slot name="left"></slot></div>
       <div class="nav-item"><slot name="center"></slot></div>
-      <div class="nav-item"><img class="daohang" src="~assets/imgs/guide/daohang.png" alt=""></div>
+      <div class="nav-item">
+          <!-- <img class="daohang" src="~assets/imgs/guide/daohang.png" alt=""> -->
+      </div>
 
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div id="container">
-        <nav-bar><span slot="center">不占座</span></nav-bar>
+        <nav-bar><span slot="center">自习位置预约系统</span></nav-bar>
         <study-top></study-top>
         <div v-if="this.$store.state.duration===0" >
           <study-center></study-center>
